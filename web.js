@@ -21,4 +21,4 @@ io.sockets.on('connection', function (socket) {
   socket.on('ppevent', function (data) {
     io.sockets.emit('news2', { hello: data.message });
   });
-});
+}); 
