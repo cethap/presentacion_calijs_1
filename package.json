@@ -1,8 +1,19 @@
 {
-  "name": "node-example",
+  "name": "ace",
   "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
   "dependencies": {
-    "express": "2.5.11",
-    "socket.io": "0.9.6"
+    "express": "~3.3.4",
+    "jade": "~0.34.0",
+    "socket.io": "*"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-develop": "~0.1.1",
+    "grunt-contrib-watch": "~0.4.4",
+    "request": "~2.22.0"
   }
 }

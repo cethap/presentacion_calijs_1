@@ -1,0 +1,89 @@
+!!! 5
+html
+  head
+    meta(charset='utf-8')
+    title Presentación
+    //
+       Sets initial viewport load and disables zooming  
+    meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no')
+    //
+       Include the compiled Ratchet CSS 
+    link(rel='stylesheet', href='css/ratchet.css')
+    //
+       Include the compiled Ratchet JS 
+    script(src='js/ratchet.js')
+    script(src='/js/jquery.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='/js/p.js')
+    style
+      .list a{
+          margin: 5px auto !important;
+      }     
+      .active{
+          background-color: #ccc;
+      }      
+      .content_padded{
+          margin-top: 52px;
+      }
+
+  body
+    //
+       Make sure all your bars are the first things in your <body> 
+
+    header.bar-title
+        a.button-prev(href='#')
+            | Pre
+        h1.title Presentación
+        a.button-next(href='#')
+            | Sig
+    //
+       Wrap all non-bar HTML in the .content div (this is actually what scrolls) 
+    .content      
+      br
+      ul.list.inset
+        li
+          a(href="#currentModal", data-href='#/bored')#CurrentModalButton
+              | Paso 1
+        li
+          a(href="#", data-href='#/paso2') 
+              | Paso 2              
+        li
+          a(href="#", data-href='#/big')
+              | Paso 6
+        li
+          a(href="#", data-href='#/tiny')
+              | Paso 7                                                
+        li
+          a(href="#", data-href='#/ing')
+              | Paso 8
+        li
+          a(href="#", data-href='#/imagination') 
+              | Paso 9
+        li
+          a(href="#", data-href='#/source')
+              | Paso 10
+        li
+          a(href="#", data-href='#/one-more-thing')
+              | Paso 11
+        li
+          a(href="#", data-href='#/its-in-3d')
+              | Paso 12
+        li
+          a(href="#", data-href='#/overview')
+              | Paso 13
+    #currentModal.modal
+      header.bar-title
+        h1.title Opciones
+        a.button(href='#currentModal')
+          | Cerrar
+      div.content_padded
+        ul.list.inset
+          li
+            a(href="#", data-href='#/title')
+                | Paso 3
+          li
+            a(href="#", data-href='#/its')
+                | Paso 4
+          li
+            a(href="#", data-href='#/big')
+                | Paso 5
