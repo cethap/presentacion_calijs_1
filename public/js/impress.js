@@ -621,7 +621,7 @@
                 if (window.location.hash !== lastHash) {
                     goto( getElementFromHash() );
                 }
-            }, false);
+            }, true);
             
             // START 
             // by selecting step defined in url or first step of the presentation

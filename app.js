@@ -37,6 +37,11 @@ io.sockets.on('connection', function (socket) {
   socket.on('sendLink', function (data) {
     io.sockets.emit('Linkiar', data);
   });
+
+  socket.on('sendBook', function (data) {
+    io.sockets.emit('Book', data);
+  });
+  
 });
 
 // http.createServer(app).listen(app.get('port'), function(){

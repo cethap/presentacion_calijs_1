@@ -8,6 +8,7 @@
  * Copyright 2014, Codrops
  * http://www.codrops.com
  */
+window.ll = [];
 (function() {
 
 	var supportAnimations = 'WebkitAnimation' in document.body.style ||
@@ -84,8 +85,9 @@
 			this.ctrlBBPrev.addEventListener( 'click', function( ev ) { ev.preventDefault(); self._prevPage(); } );
 		}
 
-		this.ctrls.querySelector( 'a:nth-child(2)' ).addEventListener( 'click', function( ev ) { ev.preventDefault(); self._showDetails(); } );
+		//this.ctrls.querySelector( 'a:nth-child(2)' ).addEventListener( 'click', function( ev ) { ev.preventDefault(); self._showDetails(); } );
 		this.closeDetailsCtrl.addEventListener( 'click', function() { self._hideDetails(); } );
+		window.ll.push(self);
 	}
 
 	Book.prototype._open = function() {

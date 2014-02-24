@@ -42,48 +42,51 @@ html
       br
       ul.list.inset
         li
-          a(href="#currentModal", data-href='#/bored')#CurrentModalButton
+          a(href="#", data-href='#/bored')
               | Paso 1
         li
           a(href="#", data-href='#/paso2') 
               | Paso 2              
         li
+          a(href="#currentModal", data-href='#/title')#CurrentModalButton
+              | Paso 3
+        li
+          a(href="#", data-href='#/its')
+              | Paso 4                                                
+        li
           a(href="#", data-href='#/big')
-              | Paso 6
-        li
-          a(href="#", data-href='#/tiny')
-              | Paso 7                                                
-        li
-          a(href="#", data-href='#/ing')
-              | Paso 8
+              | Paso 5
         li
           a(href="#", data-href='#/imagination') 
-              | Paso 9
+              | Paso 6
         li
           a(href="#", data-href='#/source')
-              | Paso 10
+              | Paso 7
         li
           a(href="#", data-href='#/one-more-thing')
-              | Paso 11
+              | Paso 8
         li
           a(href="#", data-href='#/its-in-3d')
-              | Paso 12
+              | Paso 9
         li
           a(href="#", data-href='#/overview')
-              | Paso 13
+              | Paso 10
     #currentModal.modal
       header.bar-title
         h1.title Opciones
-        a.button(href='#currentModal')
+        a.button(href='#currentModal',data-book-accion='close')
           | Cerrar
       div.content_padded
         ul.list.inset
           li
-            a(href="#", data-href='#/title')
-                | Paso 3
+            a(href="#", data-book-accion='open')
+                | Paso 3.1
           li
-            a(href="#", data-href='#/its')
-                | Paso 4
+            a(href="#", data-book-accion='move',data-book-paso='2')
+                | Paso 3.2
           li
-            a(href="#", data-href='#/big')
-                | Paso 5
+            a(href="#", data-book-accion='move',data-book-paso='3')
+                | Paso 3.3
+          li
+            a(href="#", data-book-accion='move',data-book-paso='4')
+                | Paso 3.4                              
